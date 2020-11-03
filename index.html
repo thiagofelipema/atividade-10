@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+    <style>
+        /* https://caniuse.com/#feat=css-grid */
+        
+        html,
+        body {
+            margin: 10px;
+            height: calc(100% - 40px);
+            
+        }
+
+        div{display: flex;}
+        
+        
+        body {
+            display: grid;
+            grid-template-columns:[inicio] 150px [metade-1 meio-1] 150px [metade-2 meio-2] 320px [fim];
+            grid-template-rows: 100px 200px 200px;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+
+           
+          
+
+        }
+        
+    
+        .carro3 {
+            grid-column-start: metade-2;
+            grid-column-end: fim;
+            grid-column: meio-1 / fim;
+            grid-row: 1 / span 2;
+            /* row-start column-start row-end column-end */
+            grid-area: 1 / meio-2 / span 2 / fim;
+        }
+
+        .carro4{
+            grid-column: inicio / metade-2;
+            grid-row: 2 / span 1;
+        }
+
+        .carro5{
+            grid-column: inicio / metade-2;
+            grid-row: 3 / span 1;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="carro1"><img src="imagens/carro1.jpg" width="150px" height="100px"></div>
+    <div class="carro2"><img src="imagens/carro2.jpg" width="150px" height="100px"></div>
+    <div class="carro3"><img src="imagens/carro3.jpg" width="320px"></div>
+    <div class="carro4"><img src="imagens/carro4.jpg" width="320px"></div>
+    <div class="carro5"><img src="imagens/carro5.jpg" width="320px" height="200px"></div>
+    <div class="carro6"><img src="imagens/carro6.jpg" width="320px"></div>
+    
+</body>
+
+</html>
